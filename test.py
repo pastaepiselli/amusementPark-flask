@@ -17,9 +17,12 @@ def test_all_rides(n):
     show_response(response, n)
 
 def test_get_ride(ride_id: str, n):
-    response = requests.get(url=f"http://localhost:/rides/{ride_id}")
+    response = requests.get(url=f"http://localhost:5000/rides/{ride_id}")
     show_response(response, n)
+
+
 
 if __name__ == "__main__":
     test_home(1)
     test_all_rides(2)
+    test_get_ride("002", 3)
